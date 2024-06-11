@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <link rel="shortcut icon" href="https://i.ibb.co/3YqKwff/bg.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="\css\main.css">
+    <title>Welcome to MetaDAO</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="\images\logo\logo58x52.png" alt="" width="58" height="52">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            
+                    <li class="nav-item">
+                        <a class="nav-link" href="../mypage.html">My page</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Exchange
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a class="dropdown-item" href="../cyadex.html">CYA Exchange</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="../mt5/mt1.html">MT5 Exchange</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="../mut.html">MUT Exchange</a></li>
+                      </ul>
+                    </li>  
+
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Defi
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a class="dropdown-item" href="../metafarm.html">MetaFarm</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="../metaq.html">MetaQ</a></li>     
+                        <li class="dropdown-item"><a class="dropdown-item" href="../metatrain.html">MetaTrain</a></li> 
+                        <li class="dropdown-item"><a class="dropdown-item" href="../metatrain2.html">MetaTrain2</a></li> 
+                        <li class="dropdown-item"><a class="dropdown-item" href="../metatree.html">MetaTree</a></li>         
+                      </ul>
+                    </li>  
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Add information to wallet
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="Tmemberjoin()">Member registration</a>
+                    </li>
+                    <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="addTokenCya()">Add CYA token</a>
+                  </li>
+                 
+                  <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="addTokenMut()">Add MUT</a>
+                </li>
+               
+                  </ul>
+                </li>
+
+                </ul>
+       
+            </div>
+        </div>
+    </nav>
+    
+  <!--Head up to here -->
+  
+  
+  <body>
+
+          <div class="alert alert-secondary" role="alert">
+          
+            <div class="container-box">
+              <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                <div class="col">
+                  <div class="p-3 border bg-light">1BNB=$<span id="bPrice">-</span></div>
+                </div>
+               
+                <div class="col">
+                  <div class="p-3 border bg-light">1CYA:$1</div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border bg-light">1CYA: <span id="cPrice2">-</span>BNB</div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border bg-light">BNB TVL: <span id="Tvl">-</span>BNB</div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!--This is the dashboard -->
+
+        <div class="bg-light p-5 rounded">
+          <h1>Meta Tree</h1>
+          <p>As the number of participants increases, points are paid every time the number doubles compared to my number. </p>
+          <p>You must be recommended more than twice to earn points</p>
+          <p>Additional bonuses paid depending on the number of referrals</p>
+          <p>You can only contribute once per account</p>
+
+        </div>
+     
+        <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+          Meta tree current situation
+        </button>
+       
+        <li class="list-group-item">Number of participants: <span id="tsum"></span>th</li>
+ <li class="list-group-item">Participant allowance: <span id="happy"></span>p</li>
+ <div class="input-group mb-3">
+ <input type="text" id="mtmento" class="form-control" placeholder="Enter the referrer's address here" aria-label="Referrer's address" aria-describedby="basic-addon2">
+ <input type="text" id="mtmid" class="form-control" placeholder="Enter your MT5 account ID here" aria-label="MT5 account ID" aria-describedby="basic- addon2">
+ <button class="btn btn-outline-secondary" id="basic-addon2" style="cursor: pointer;" onclick="Mtmemberjoin()">Join</button>
+ </div>
+        
+        
+        <li class="list-group-item">
+          
+ 
+          <button class="btn btn-outline-success" id="basic-addon2" type="submit" onclick="MtmemberLogin()">
+            View my status [Connect wallet]
+          </button>
+          <li class="list-group-item">This dividend: <span id="thappy">-</span>CYA</li>
+          <li class="list-group-item">My number: <span id="tmynum">-</span></li>
+          <li class="list-group-item">This allowance multiplier: <span id="tdep">-</span></li>
+          <li class="list-group-item">Withdrawal ticket: <span id="mywc">-</span></li>
+          <li class="list-group-item">Number of recommendations: <span id="Bonus">-</span></li>
+         
+          <li class="list-group-item"><div class="progress">
+          <div class="progress-bar progress-bar-success progress-bar-striped" id="RipeBar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></li>
+          <li class="list-group-item">Convert points when the bar is 100% filled</li>
+          <button class="badge bg-warning text-dark rounded-pill style" cursor: pointer; onclick="Mtcheck()">Point conversion</button>
+          <li class="list-group-item">If you have points that can be withdrawn, withdraw them</li>
+          <li class="list-group-item">Withdrawable Point: <span id="Tjack">-</span>P</li>
+        
+          <button class="badge bg-warning text-dark rounded-pill style" type="submit" onclick="Mtwithdraw()">Withdraw points</button>
+        <div>
+
+        </div>
+
+
+      </div>
+      </div>
+
+ 
+
+     <!--Start footer -->
+
+     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p><a class="nav-link" href="https://twitter.com/choecheolung8">MetaDAO X</a></p>
+      <p>We do not collect personal information</p>
+      <p><a class="nav-link" href="https://t.me/cyadaokorea">Telegram</a></p>
+ <!-- End footer -->
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+          <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+          <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+          <script type="text/javascript"></script>
+          <script src="../src/metatree.js"></script>
+          <script src="../src/topinfo.js"></script> 
+       
+  
+    </body>
+
+</html>
