@@ -12,7 +12,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
         crossorigin="anonymous">
     <link rel="stylesheet" href="\css\main.css">
-    <title>Welcome to MetaDAO</title>
+    <title>환영합니다 서해협동조합 플랫폼 입니다</title>
 </head>
 
 <body>
@@ -35,39 +35,38 @@
 
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Exchange
+                        토큰거래소
                       </a>
                       <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a class="dropdown-item" href="../cyadex.html">CYA Exchange</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item" href="../mt5/mt1.html">MT5 Exchange</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item" href="../mut.html">MUT Exchange</a></li>
-                        
+                        <li class="dropdown-item"><a class="dropdown-item" href="../cyadex.html">CYA</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="../sut.html">SUT</a></li>
+              
                       </ul>
                     </li>  
+
 
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Defi
+                      실물자산거래소
                       </a>
                       <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a class="dropdown-item" href="../metafarm.html">MetaFarm</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item" href="../metaq.html">MetaQ</a></li>     
-                        <li class="dropdown-item"><a class="dropdown-item" href="../metatrain.html">MetaTrain</a></li> 
-                        <li class="dropdown-item"><a class="dropdown-item" href="../metatrain2.html">MetaTrain2</a></li>     
+                        <li class="dropdown-item"><a class="dropdown-item" href="../asset/real1.html">부동산</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="../asset/goat.html">염소</a></li>
                       </ul>
                     </li>  
+                    
 
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Add information to wallet
+                    조합가입
                   </a>
                   <ul class="dropdown-menu">
-                    <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="Tmemberjoin()">Member registration</a>
+                    <li class="dropdown-item"><a class="dropdown-item" href="../memberjoin.html">조합가입하기</a></li>
                     </li>
-                    <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="addTokenCya()">Add CYA token</a>
+                    <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="addTokenCya()">스테이블토큰 추가</a>
                   </li>
                  
-                  <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="addTokenMut()">Add MUT</a>
+                  <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="addTokenMut()">서해유틸리티토큰 추가</a>
                 </li>
                
                   </ul>
@@ -80,6 +79,31 @@
     </nav>
     
   <!--Head up to here -->
+  
+  
+  <body>
+
+          <div class="alert alert-secondary" role="alert">
+          
+            <div class="container-box">
+              <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                <div class="col">
+                  <div class="p-3 border bg-light">1BNB=$<span id="bPrice">-</span></div>
+                </div>
+               
+                <div class="col">
+                  <div class="p-3 border bg-light">1CYA:$1</div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border bg-light">1CYA: <span id="cPrice2">-</span>BNB</div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border bg-light">BNB TVL: <span id="Tvl">-</span>BNB</div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!--This is the dashboard -->
   
   
   <body>
@@ -128,36 +152,16 @@
     <!-- Carousel to here -->
 
     <div class="bg-light p-5 rounded">
-        <h5>소유권이전 등기 가능 물건</h5>
-        <p>토지 및 건축 소유권 이전등기 가능한 물건 입니다</p>
-        <p>조합원은 제3자 매매가능한 평생사용권도 가능 합니다</p>
-        <p>적법한 중개인과 토지주가 직접 계약 진행합니다</p>
-    </div>
+        <h5>장박가능 낭만아지트 P2P 거래소</h5>
+        <p>1개월 이상 장박 사이트 거래소 입니다</p>
+        <p>사용권에 대한 권리는 서해협동조합이 보장합니다</p>
+        <p>남은사용시간에 대해 자유롭게 조합원간 거래가 가능합니다</p>
 
-   
- 
-   <div class="bg-light p-5 rounded">
-    <p>Account ID range: 0-29</p>
-    <p>Telegram ID:hartbeat</p>
-    <p>Transaction total:<span id="Tp">-</span>p</p>
-    <p>Check point recharge amount: <a href="./mypage.html">Go to My Page</a></p>
+    <p>담당자 연락처:010-3687-0314</p>
+    <p>거래를 하려면 CYA를 이용하여 포인트 충전을 하셔야 합니다</p>
+    <p>포인트 확인하기: <a href="./mypage.html">마이페이지 가기</a></p>
 </div>
 
-  <!-- exchange from here -->
-
-<div class="container text-center">
-  <div class="row">
-    <div class="col"><a class="" href="../mt5/mt1.html" onclick="">1st exchange</a>
-    </div>
-    <div class="col"><a class="" href="../mt5/mt2.html" onclick="">2st exchange</a>
-    </div>
-    <div class="col"><a class="" href="../mt5/mt3.html" onclick="">3st exchange</a>
-    </div>
-
-  <div class="col"><a class="" href="../mt5/tiger.html" onclick="">Tiger exchange</a>
-  </div>
-</div>
-  <!-- exchange to here -->
 
 
 <div class="input-group mb-3">
@@ -195,7 +199,7 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script type="text/javascript"></script>
 <script src="../src/topinfo.js"></script>
-<script src="../src/mt1.js"></script>   
+<script src="../src/real1.js"></script>   
 
 
 </body>

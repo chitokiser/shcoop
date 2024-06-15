@@ -12,7 +12,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
         crossorigin="anonymous">
     <link rel="stylesheet" href="\css\main.css">
-    <title>Welcome to MetaDAO</title>
+    <title>환영합니다 서해협동조합 플랫폼 입니다</title>
 </head>
 
 <body>
@@ -35,39 +35,38 @@
 
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Exchange
+                        토큰거래소
                       </a>
                       <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a class="dropdown-item" href="../cyadex.html">CYA Exchange</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item" href="../mt5/mt1.html">MT5 Exchange</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item" href="../mut.html">MUT Exchange</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="../cyadex.html">CYA</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="../sut.html">SUT</a></li>
+              
                       </ul>
                     </li>  
+
 
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Defi
+                      실물자산거래소
                       </a>
                       <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a class="dropdown-item" href="../metafarm.html">MetaFarm</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item" href="../metaq.html">MetaQ</a></li>     
-                        <li class="dropdown-item"><a class="dropdown-item" href="../metatrain.html">MetaTrain</a></li> 
-                        <li class="dropdown-item"><a class="dropdown-item" href="../metatrain2.html">MetaTrain2</a></li> 
-                        <li class="dropdown-item"><a class="dropdown-item" href="../metatree.html">MetaTree</a></li>         
+                        <li class="dropdown-item"><a class="dropdown-item" href="../asset/real1.html">부동산</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="../asset/goat.html">염소</a></li>
                       </ul>
                     </li>  
+                    
 
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Add information to wallet
+                    조합가입
                   </a>
                   <ul class="dropdown-menu">
-                    <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="Tmemberjoin()">Member registration</a>
+                    <li class="dropdown-item"><a class="dropdown-item" href="../memberjoin.html">조합가입하기</a></li>
                     </li>
-                    <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="addTokenCya()">Add CYA token</a>
+                    <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="addTokenCya()">스테이블토큰 추가</a>
                   </li>
                  
-                  <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="addTokenMut()">Add MUT</a>
+                  <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="addTokenMut()">서해유틸리티토큰 추가</a>
                 </li>
                
                   </ul>
@@ -105,30 +104,20 @@
             </div>
           </div>
             <!--This is the dashboard -->
-
       
             <div class="d-grid gap-2">
               <button class="btn btn-dark" type="button">My page</button>
             </div>
-            <li class="list-group-item">If you successfully register as a member, you will become level 1</li>
-            <button class="btn btn-outline-success" id="randomButton">Automatic input of mentor</button>
-              <p id="randomData" style="display: none;"></p>
-         
-                     <div class="input-group mb-3">
-                      <input type="text" id="mentoaddress" class="form-control" placeholder="Enter your mentor account and sign up as a member (free)" aria-label="CYA"
-                        aria-describedby="basic-addon2">
-                      <span class="input-group-text glow" id="basic-addon2" style="cursor: pointer;" onclick="Memberjoin()">Register as a member</span>
-                    </div>
-                  </li>
-            
+            <li class="list-group-item">조합에 가입하면 레벨1이 됩니다 </li>
+     
                 <button class="btn btn-outline-success" id="basic-addon2" type="submit" onclick="MemberLogin()">
-                  View my status [Connect wallet]
+                  나의상태보기 [지갑연결]
                 </button>
-                <li class="list-group-item">My level: <span id="Mylev"></span></li>
-                <li class="list-group-item">My experience: <span id="Exp"></span>exp</li>
-                <li class="list-group-item">Experience required to level up: <span id="Expneeded"></span>exp</li>
-                <li class="list-group-item">My point = <span id="Mypoint">-</span>p</li>
-                <li class="list-group-item">My Mentor = <span id="Mymento">-</span></li>
+                <li class="list-group-item">레벨: <span id="Mylev"></span></li>
+                <li class="list-group-item">경험치: <span id="Exp"></span>exp</li>
+                <li class="list-group-item">다음레벨업에 필요한 경험치: <span id="Expneeded"></span>exp</li>
+                <li class="list-group-item">포인트 = <span id="Mypoint">-</span>p</li>
+                <li class="list-group-item">멘토 = <span id="Mymento">-</span></li>
                 <li class="list-group-item"> <button type="button" class="btn btn-outline-dark position-relative" cursor:
                     pointer; onclick="Levelup()">
                     Level up
@@ -141,9 +130,10 @@
                 <P></P>
               </div>
               <div><span style="color:red">1 point=1CYA</span></div>
-               <button class="btn btn-outline-success" type="submit" onclick="Bonuswithdraw()">Withdraw points</button>
+               <button class="btn btn-outline-success" type="submit" onclick="Bonuswithdraw()">포인트인출</button>
                <div class="input-group mb-3">
-                <input type="text" id="chargeAmount" class="form-control" placeholder="Enter the points to recharge (1CYA=1P)" aria-label="CYA"
+                <li class="list-group-item">포인트 충전 </li>
+                <input type="text" id="chargeAmount" class="form-control" placeholder="충전할 금액을 입력하세요 (1CYA=1P)" aria-label="CYA"
                   aria-describedby="basic-addon2">
                 <span class="input-group-text" id="basic-addon2" style="cursor: pointer;" onclick="Charge()">Charge points</span>
                

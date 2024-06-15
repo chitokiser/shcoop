@@ -12,7 +12,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
         crossorigin="anonymous">
     <link rel="stylesheet" href="\css\main.css">
-    <title>Welcome to MetaDAO</title>
+    <title>환영합니다 서해협동조합 플랫폼 입니다</title>
 </head>
 
 <body>
@@ -35,39 +35,38 @@
 
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Exchange
+                        토큰거래소
                       </a>
                       <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a class="dropdown-item" href="../cyadex.html">CYA Exchange</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item" href="../mt5/mt1.html">MT5 Exchange</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item" href="../mut.html">MUT Exchange</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="../cyadex.html">CYA</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="../sut.html">SUT</a></li>
+              
                       </ul>
                     </li>  
+
 
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Defi
+                      실물자산거래소
                       </a>
                       <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a class="dropdown-item" href="../metafarm.html">MetaFarm</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item" href="../metaq.html">MetaQ</a></li>     
-                        <li class="dropdown-item"><a class="dropdown-item" href="../metatrain.html">MetaTrain</a></li> 
-                        <li class="dropdown-item"><a class="dropdown-item" href="../metatrain2.html">MetaTrain2</a></li> 
-                        <li class="dropdown-item"><a class="dropdown-item" href="../metatree.html">MetaTree</a></li>         
+                        <li class="dropdown-item"><a class="dropdown-item" href="../asset/real1.html">부동산</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="../asset/goat.html">염소</a></li>
                       </ul>
                     </li>  
+                    
 
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Add information to wallet
+                    조합가입
                   </a>
                   <ul class="dropdown-menu">
-                    <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="Tmemberjoin()">Member registration</a>
+                    <li class="dropdown-item"><a class="dropdown-item" href="../memberjoin.html">조합가입하기</a></li>
                     </li>
-                    <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="addTokenCya()">Add CYA token</a>
+                    <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="addTokenCya()">스테이블토큰 추가</a>
                   </li>
                  
-                  <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="addTokenMut()">Add MUT</a>
+                  <li class="dropdown-item"><a class="dropdown-item" href="#" onclick="addTokenMut()">서해유틸리티토큰 추가</a>
                 </li>
                
                   </ul>
@@ -106,42 +105,42 @@
           </div>
             <!--This is the dashboard -->
     
-  <h2>CYA Exchange</h2>
-  <p>CYA is issued based on opBNB (Network ID: 204).</p>
-  <p>CYA can be exchanged for opBNB at a rate of $1 each</p>
-  <p>BNB:opBNB official exchange (requires corresponding coins in MetaMask) => <a class="navbar-brand" href="https://opbnb-bridge.bnbchain.org/withdraw">
+  <h2>CYA 교환소</h2>
+  <p>CYA는 opBNB(네트워크 ID: 204)를 기반으로 발행됩니다.</p>
+  <p>CYA는 1달러당 opBNB로 교환할 수 있습니다</p>
+  <p>BNB:opBNB 공식 교환소 => <a class="navbar-brand" href="https://opbnb-bridge.bnbchain.org/withdraw">
     <img src="\images\logo\opBNB.png" alt="" width="200" height="40">
   </a> </p>
-  <p>opBNB can be exchanged for CYA tokens.</p>
+
 
 </div>
 
 
 <div class="alert alert-info" role="alert">
-  <P>BNB:CYA When you insert BNB, CYA will be exchanged. </P>
+  <P>BNB:CYA BNB를 투입하면 CYA가 교환됩니다. </P>
  
 
 <div class="input-group mb-3">
   <span class="input-group-text" id="basic-addon1">BNB input</span>
-  <input id="bnbInput" type="text" class="form-control" placeholder="Enter BNB here (decimals allowed)...." aria-label="Username" aria-describedby="basic -addon1">
+  <input id="bnbInput" type="text" class="form-control" placeholder="여기에 BNB를 입력하세요(소수점 사용 가능)...." aria-label="Username" aria-describedby="basic -addon1">
 </div>
 
 <div class="input-group mb-3">
-  <input id="bnbOutput" type="text" class="form-control" placeholder="The amount of CYA exchanged is displayed here" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <input id="bnbOutput" type="text" class="form-control" placeholder="여기에 CYA를 입력하세요(소수점 사용 가능)...." aria-label="Recipient's username" aria-describedby="basic-addon2">
   <span onclick="buyCya()" style="cursor: pointer;" class="input-group-text" id="basic-addon2">Exchange</span>
 </div>
 </div>
 
 <div class="alert alert-info" role="alert">
-<p> When you insert CYA, BNB will be exchanged. Exchange fee 1% </p>
+  <P>CYA:BNB CYA를 투입하면 BNB가 교환됩니다. </P>
 
 <div class="input-group mb-3">
   <span class="input-group-text" id="basic-addon1">CYA input</span>
-  <input id="cyaInput" type="text" class="form-control" placeholder="If you enter CYA here...."aria-label="Username" aria-describedby="basic-addon1">
+  <input id="cyaInput" type="text" class="form-control" placeholder="여기에 교환활 CYA를 입력하면"aria-label="Username" aria-describedby="basic-addon1">
 </div>
 <div class="input-group mb-3">
  
-  <input id="cyaOutput" type="text" class="form-control" placeholder="The amount of BNB being exchanged is displayed here" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <input id="cyaOutput" type="text" class="form-control" placeholder="여기에 교환될 BNB가 표시됩니다" aria-label="Recipient's username" aria-describedby="basic-addon2">
   <span onclick="sellCya()" style="cursor: pointer;" class="input-group-text" id="basic-addon2">Exchange</span>
 </div>
 </div>

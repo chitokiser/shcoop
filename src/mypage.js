@@ -1,6 +1,6 @@
 let contractAddress = {
-  metbank: "0x0ef1043e59a7f38aC1acBeB04CcA9714C4eb0098",
-  metmarket: "0xd9fC1B43BD9F37c8BAFC666CA88A74Ad8aDa2627" //mt5
+  metbank: "0xB5D24E748a42fd27Cd57f8Acf1bd3C1d87ca3FFD",  //sutbnak
+  metmarket: "0x87280638619c508967c42AE10c0c3E6d5d57f2c0" //sutrealmarket
     
   };
   let contractAbi = {
@@ -32,8 +32,8 @@ let contractAddress = {
       "function getprice() public view returns (uint256)",
       "function gettime() external view returns (uint256)",
       "function withdraw() public ",
-      "function buymut(uint _num) public returns(bool)",
-      "function sellmut(uint num)public returns(bool)",
+      "function buysut(uint _num) public returns(bool)",
+      "function sellsut(uint num)public returns(bool)",
       "function getpay(address user) public view returns (uint256)",
       "function allowcation() public returns(bool) ",
       "function getlevel(address user) public view returns(uint) ",
@@ -46,68 +46,6 @@ let contractAddress = {
     ]
 
 
-  };
-
-
-  // 멘토데이타 입력
-  var dataArray = [
-    "0xe31b9c8f32081D0a61Fa1268d6cfC78207cb75F8",
-    "0xd0b8E0Dbb658d24cA59aa7108f582daD98Dd2A27",
-    "0x97665586235b76f6Fd34fDD1db675C2D129A6824"
-   
- 
-  ];
-  
-  // Function to select and display random data
-  function displayRandomData() {
-    // Select a random item from the array
-    var randomIndex = Math.floor(Math.random() * dataArray.length);
-    var randomData = dataArray[randomIndex];
-  
-    // Display the random data
-    document.getElementById("randomData").textContent = randomData;
-  }
-  
-  // Event listener for button click
-  document.getElementById("randomButton").addEventListener("click", displayRandomData);
-  
-  
-  function autoFillMentoAddress() {
-    // Retrieve the printed mentoaddress
-    var mentoaddress = document.getElementById('randomData').textContent;
-  
-    document.getElementById('mentoaddress').value = mentoaddress;
-  }
-  
-  document.getElementById("randomButton").addEventListener("click", autoFillMentoAddress);
-  
-
-  let Memberjoin = async () => {
-    let userProvider = new ethers.providers.Web3Provider(window.ethereum, "any");
-    await window.ethereum.request({
-      method: "wallet_addEthereumChain",
-      params: [{
-          chainId: "0xCC",
-          rpcUrls: ["https://opbnb-mainnet-rpc.bnbchain.org"],
-          chainName: "opBNB",
-          nativeCurrency: {
-              name: "BNB",
-              symbol: "BNB",
-              decimals: 18
-          },
-          blockExplorerUrls: ["https://opbnbscan.com"]
-      }]
-  });
-    await userProvider.send("eth_requestAccounts", []);
-    let signer = userProvider.getSigner();
-
-    let cyamemContract = new ethers.Contract(contractAddress.metbank, contractAbi.metbank, signer);
-
-    try {
-      await cyamemContract.memberjoin(document.getElementById('mentoaddress').value);
-    } catch(e) {
-      alert(e.data.message.replace('execution reverted: ',''))
-    }
   };
 
 

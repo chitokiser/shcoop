@@ -1,11 +1,11 @@
  
       const contractAddress = {
         
-        cyabankAddr:"0x0ef1043e59a7f38aC1acBeB04CcA9714C4eb0098" //mutbank
-      }
+        cyabankAddr:"0xB5D24E748a42fd27Cd57f8Acf1bd3C1d87ca3FFD" //sutbank
+   }
    
       const contractAbi = {
-     
+
 
         cyabank: [
           "function g1() public view virtual returns(uint256)",
