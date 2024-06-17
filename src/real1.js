@@ -116,11 +116,11 @@ let metaddr = {
                             <p class="card-text"><strong>물건상세정보:</strong> <a href="${metaInfo.info3}" target="_blank">Click Here</a></p>
                             <p class="card-text"><img src="${metaInfo.info4}" alt="Product Image" style="width: 600px; height: auto;"></p>
                             <p class="card-text"><strong>사용자:</strong> ${metaInfo.info9}</p>
-                            <p class="card-text"><strong>1개월사용가격:</strong> ${metaInfo.info7/1e18}CYA</p>
+                            <p class="card-text"><strong>12개월사용가격:</strong> ${metaInfo.info7*12/1e18}CYA</p>
                             <p class="card-text"><strong>거래가능상태:</strong> ${isPurchasable}</p> 
                          
-                             <input type="number" id="month${i}" class="form-control form-control-sm" placeholder="구매할 개월수를 입력하고 구매하기 버튼을 클릭하세요">
-                            <button type="button" class="btn btn-primary btn-sm mr-2" onclick="purchase(this)" data-id="${i}">구매하기</button>
+                  
+                            <button type="button" class="btn btn-primary btn-sm mr-2" onclick="purchase(this)" data-id="${i}">12개월사용권구매하기</button>
                             <p>1개월이상 남았을 경우에만 판매등록 가능합니다</p>
                             <input type="number" id="saleAmount${i}" class="form-control form-control-sm" placeholder="판매할 가격을 입력하고 판매하기 버튼을 클릭하세요">
                             <button type="button" class="btn btn-primary btn-sm mr-2" onclick="registerSale(this)" data-id="${i}">판매하기</button>
@@ -197,7 +197,7 @@ const purchase = async (button) => {
     const accountId = button.getAttribute("data-id"); // 버튼의 data-id 속성 값 가져오기
     const userProvider = new ethers.providers.Web3Provider(window.ethereum, "any");
     const buyMonthInput = document.getElementById(`month${accountId}`); // 해당 ID의 판매금액 입력란 가져오기
-    const buyMonth = parseInt(buyMonthInput.value); // 판매금액 입력란의 값 가져와서 정수형으로 변환
+    const buyMonth = 12; // 판매금액 입력란의 값 가져와서 정수형으로 변환
     await window.ethereum.request({
       method: "wallet_addEthereumChain",
       params: [{
